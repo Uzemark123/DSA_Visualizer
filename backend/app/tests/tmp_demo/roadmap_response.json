@@ -1,0 +1,67 @@
+{
+  "message": "Roadmap generated",
+  "request": {
+    "user_requested_roadmap_length": 6,
+    "user_difficulty_selection": [
+      10,
+      44
+    ],
+    "user_priority_patterns": [
+      10
+    ],
+    "user_excluded_patterns": [],
+    "difficulty": {
+      "easy": true,
+      "medium": true,
+      "hard": false
+    },
+    "chunk_size": 2
+  },
+  "roadmap": [
+    {
+      "roadmapIndex": 0,
+      "chunk": {
+        "subpatternId": 10.2,
+        "tier": 1.0,
+        "finalFrequencySum": 9.0,
+        "chunkNumber": 0,
+        "roadmapIndexAllocation": null,
+        "problems": [
+          {
+            "finalFrequency": 9.0,
+            "title": "TP Array B",
+            "url": "http://b"
+          }
+        ]
+      },
+      "revisionProblem": {
+        "subpatternId": 44.1,
+        "tier": 3.0,
+        "finalFrequencySum": 8.0,
+        "problem": {
+          "title": "BST Intro",
+          "url": "http://c"
+        },
+        "lastPosition": 0
+      }
+    },
+    {
+      "roadmapIndex": 1,
+      "chunk": {
+        "subpatternId": 10.1,
+        "tier": 1.0,
+        "finalFrequencySum": 10.0,
+        "chunkNumber": 0,
+        "roadmapIndexAllocation": null,
+        "problems": [
+          {
+            "finalFrequency": 10.0,
+            "title": "TP Array A",
+            "url": "http://a"
+          }
+        ]
+      },
+      "revisionProblem": null
+    }
+  ]
+}

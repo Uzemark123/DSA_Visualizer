@@ -4,11 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#020617',
-        panel: '#0b1224',
-        card: '#0f172a',
+        ink: '#18181B',
+        panel: '#27272A',
+        card: '#27272A',
         accent: {
-          teal: '#22d3ee',
+          amber: '#F59E0B',
+          orange: '#FB923C',
         },
       },
       borderRadius: {

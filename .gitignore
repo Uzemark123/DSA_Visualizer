@@ -1,0 +1,29 @@
+# Node
+node_modules/
+dist/
+
+# Environment variables
+.env
+backend/.env
+frontend/.env
+logic-engine/.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# SQLite
+*.db
+*.sqlite
+database.sqlite
+
+# Logs
+*.log
+
+# Vite
+dist/
+
+# VS Code
+.vscode/
+.vs/

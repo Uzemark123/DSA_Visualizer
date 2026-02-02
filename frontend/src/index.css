@@ -4,15 +4,72 @@
 
 :root {
   color-scheme: dark;
-  background-color: #020617;
+  background-color: #18181B;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #020617;
+  background-color: #18181B;
 }
 
 #root {
   min-height: 100vh;
+}
+
+.excalidraw-host .layer-ui__wrapper footer {
+  display: none !important;
+}
+
+.excalidraw-host .sidebar-trigger,
+.excalidraw-host .sidebar-trigger__label-element {
+  display: none !important;
+}
+
+.excalidraw-host .layer-ui__library,
+.excalidraw-host .library-button {
+  display: none !important;
+}
+
+/* Hide default top-left menu and right library trigger */
+.excalidraw-host .App-menu,
+.excalidraw-host .layer-ui__wrapper__top-right {
+  display: none !important;
+}
+
+/* Hide scene metadata panel */
+.excalidraw-host .layer-ui__metadata {
+  display: none !important;
+}
+
+/* Hide built-in toolbar (we drive tools externally) */
+.excalidraw-host .App-toolbar,
+.excalidraw-host .App-toolbar-container,
+.excalidraw-host .shapes-section {
+  display: none !important;
+}
+
+/* Hide Excalidraw link icon + popup while preserving link data. */
+.excalidraw [data-testid='hyperlink'],
+[data-testid='hyperlink'] {
+  display: none !important;
+}
+
+.excalidraw-hyperlinkContainer {
+  display: none !important;
+}
+
+.excalidraw .hyperlink-tooltip {
+  display: none !important;
+}
+
+.excalidraw .ToolIcon_type_button[aria-label*='link'],
+.excalidraw .ToolIcon_type_button[title*='Link'],
+.excalidraw .ToolIcon_type_button[title*='link'] {
+  display: none !important;
+}
+
+.excalidraw .element-link-icon,
+.excalidraw .element-link-icon * {
+  display: none !important;
 }

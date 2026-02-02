@@ -1,0 +1,15 @@
+diff --git a/node_modules/@excalidraw/excalidraw/dist/dev/chunk-3KPV5WBD.js b/node_modules/@excalidraw/excalidraw/dist/dev/chunk-3KPV5WBD.js
+index c6cb034..02b0aa4 100644
+--- a/node_modules/@excalidraw/excalidraw/dist/dev/chunk-3KPV5WBD.js
++++ b/node_modules/@excalidraw/excalidraw/dist/dev/chunk-3KPV5WBD.js
+@@ -287,8 +287,8 @@ var IMAGE_RENDER_TIMEOUT = 500;
+ var TAP_TWICE_TIMEOUT = 300;
+ var TOUCH_CTX_MENU_TIMEOUT = 500;
+ var SCROLL_TIMEOUT = 100;
+-var ZOOM_STEP = 0.1;
+-var MIN_ZOOM = 0.1;
++var ZOOM_STEP = 0.025;
++var MIN_ZOOM = 0.025;
+ var MAX_ZOOM = 30;
+ var HYPERLINK_TOOLTIP_DELAY = 300;
+ var THEME_FILTER = "invert(93%) hue-rotate(180deg)";

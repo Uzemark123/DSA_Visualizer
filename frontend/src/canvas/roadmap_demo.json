@@ -1,0 +1,131 @@
+{
+  "id": "demo-roadmap-production-db",
+  "title": "1. Roadmap",
+  "generatedAt": "2026-01-31T17:09:17.546564Z",
+  "summary": "1. Roadmap | Jan 31 | 20 problems | Easy + Medium",
+  "filtersSummary": "Jan 31 | 20 problems | Easy + Medium",
+  "filters": {
+    "selectionMode": "custom",
+    "difficulty": {
+      "easy": true,
+      "medium": true,
+      "hard": false
+    },
+    "count": 20,
+    "customPatternIds": [
+      10,
+      44,
+      45,
+      8,
+      5,
+      3,
+      9
+    ],
+    "priorityPatternIds": [
+      10
+    ],
+    "excludedPatternIds": []
+  },
+  "problems": [
+    {
+      "id": "chunk-2-1",
+      "title": "binary-search",
+      "url": "https://leetcode.com/problems/binary-search"
+    },
+    {
+      "id": "rev-2",
+      "title": "minimum-size-subarray-sum",
+      "url": "https://leetcode.com/problems/minimum-size-subarray-sum"
+    },
+    {
+      "id": "chunk-0-3",
+      "title": "two sum",
+      "url": "https://leetcode.com/problems/two-sum/"
+    },
+    {
+      "id": "chunk-0-4",
+      "title": "3sum",
+      "url": "https://leetcode.com/problems/3sum/"
+    },
+    {
+      "id": "rev-5",
+      "title": "longest-subarray-of-1s-after-deleting-one-element",
+      "url": "https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element"
+    },
+    {
+      "id": "chunk-1-6",
+      "title": "container-with-most-water",
+      "url": "https://leetcode.com/problems/container-with-most-water"
+    },
+    {
+      "id": "chunk-1-7",
+      "title": "find-minimum-in-rotated-sorted-array",
+      "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array"
+    },
+    {
+      "id": "rev-8",
+      "title": "3sum-closest",
+      "url": "https://leetcode.com/problems/3sum-closest"
+    },
+    {
+      "id": "chunk-0-9",
+      "title": "merge-sorted-array",
+      "url": "https://leetcode.com/problems/merge-sorted-array"
+    },
+    {
+      "id": "chunk-0-10",
+      "title": "sort-colors",
+      "url": "https://leetcode.com/problems/sort-colors"
+    },
+    {
+      "id": "rev-11",
+      "title": "random pick with weight",
+      "url": "https://leetcode.com/problems/random-pick-with-weight"
+    },
+    {
+      "id": "chunk-0-12",
+      "title": "subarray-sum-equals-k",
+      "url": "https://leetcode.com/problems/subarray-sum-equals-k"
+    },
+    {
+      "id": "chunk-0-13",
+      "title": "meeting-rooms-ii",
+      "url": "https://leetcode.com/problems/meeting-rooms-ii"
+    },
+    {
+      "id": "chunk-0-14",
+      "title": "merge-intervals",
+      "url": "https://leetcode.com/problems/merge-intervals"
+    },
+    {
+      "id": "chunk-0-15",
+      "title": "insert-interval",
+      "url": "https://leetcode.com/problems/insert-interval"
+    },
+    {
+      "id": "chunk-0-16",
+      "title": "validate-binary-search-tree",
+      "url": "https://leetcode.com/problems/validate-binary-search-tree"
+    },
+    {
+      "id": "chunk-0-17",
+      "title": "maximum-depth-of-binary-tree",
+      "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree"
+    },
+    {
+      "id": "chunk-0-18",
+      "title": "same-tree",
+      "url": "https://leetcode.com/problems/same-tree"
+    },
+    {
+      "id": "chunk-1-19",
+      "title": "diameter-of-binary-tree",
+      "url": "https://leetcode.com/problems/diameter-of-binary-tree"
+    },
+    {
+      "id": "chunk-1-20",
+      "title": "subtree-of-another-tree",
+      "url": "https://leetcode.com/problems/subtree-of-another-tree"
+    }
+  ]
+}
