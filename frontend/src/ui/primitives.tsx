@@ -5,14 +5,17 @@ import React, { useMemo, useState } from 'react'
    ========================= */
 
 export const Panel: React.FC<
-  React.PropsWithChildren<{
-    className?: string
-    style?: React.CSSProperties
-  }>
-> = ({ children, className = '', style }) => (
+  React.PropsWithChildren<
+    React.HTMLAttributes<HTMLDivElement> & {
+      className?: string
+      style?: React.CSSProperties
+    }
+  >
+> = ({ children, className = '', style, ...rest }) => (
   <div
     className={`bg-panel/90 backdrop-blur border border-white/10 shadow-float ${className}`}
     style={style}
+    {...rest}
   >
     {children}
   </div>

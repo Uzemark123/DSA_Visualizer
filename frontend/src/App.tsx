@@ -3,7 +3,7 @@ import { generateNKeysBetween } from 'fractional-indexing'
 import { Excalidraw } from '@excalidraw/excalidraw'
 import type { AppState, ExcalidrawImperativeAPI, ExcalidrawInitialDataState } from '@excalidraw/excalidraw/types'
 import '@excalidraw/excalidraw/index.css'
-import { AppShell, Button, InteractionModeIndicator, LandingOverlay, Panel, RightToolbar, TopBar } from './ui/primitives'
+import { AppShell, InteractionModeIndicator, LandingOverlay, Panel, RightToolbar, TopBar } from './ui/primitives'
 import Minimap from './ui/Minimap'
 import { buildGenerateRoadmapRequest, collectPatternsForRequest } from './roadmap/collectPatterns'
 import { parseNodeLink } from './roadmap/link_parsing'
@@ -218,6 +218,8 @@ const storeViewState = (state: { scrollX: number; scrollY: number; zoom: number 
   }
 }
 
+const toNormalizedZoom = (value: number) => value as AppState['zoom']['value']
+
 const isSamePoints = (a: Array<[number, number]> | null, b: Array<[number, number]> | null) => {
   if (!a && !b) return true
   if (!a || !b || a.length !== b.length) return false
@@ -244,11 +246,6 @@ const isSameGeometry = (snapshot: GeometrySnapshot | undefined, element: any) =>
     ? element.points.map((point: [number, number]) => [point[0], point[1]]) as Array<[number, number]>
     : null
   return isSamePoints(snapshot.points, elementPoints)
-}
-
-const getTextContent = (element: any) => {
-  const raw = typeof element?.rawText === 'string' ? element.rawText : element?.text
-  return typeof raw === 'string' ? raw.trim() : ''
 }
 
 const getAnchorBounds = (elements: Array<any>) => {
@@ -981,7 +978,7 @@ export default function App() {
         if (storedView) {
           appState.scrollX = storedView.scrollX
           appState.scrollY = storedView.scrollY
-          appState.zoom = { value: storedView.zoom }
+          appState.zoom = { value: toNormalizedZoom(storedView.zoom) }
         }
         const files = tintSvgFiles(data?.files ?? {})
         setInitialScene({
@@ -1041,7 +1038,7 @@ export default function App() {
           appState: {
             scrollX: storedView.scrollX,
             scrollY: storedView.scrollY,
-            zoom: { value: storedView.zoom },
+            zoom: { value: toNormalizedZoom(storedView.zoom) },
           },
         })
         markVisitedCanvas()
@@ -1089,7 +1086,7 @@ export default function App() {
         appState: {
           scrollX,
           scrollY,
-          zoom: { value: targetZoom },
+          zoom: { value: toNormalizedZoom(targetZoom) },
         },
       })
 
@@ -1148,8 +1145,6 @@ export default function App() {
       elements: nextElements,
     })
   }, [progressById, sceneKey])
-
-  const { elementCount, selectionCount, panZoomLabel } = useMemo(() => summaryRef.current, [uiVersion])
 
   const nodeVisuals = useMemo(() => {
     const appState = appStateRef.current as AppState
@@ -1494,14 +1489,6 @@ export default function App() {
     }),
     [],
   )
-
-  const handleZoomToFit = useCallback(() => {
-    excalidrawAPI.current?.scrollToContent(undefined, { fitToContent: true })
-  }, [])
-
-  const handleClearCanvas = useCallback(() => {
-    excalidrawAPI.current?.resetScene()
-  }, [])
 
   const handleContextMenu = useCallback((event: React.MouseEvent) => {
     event.preventDefault()
