@@ -23,6 +23,8 @@ database.sqlite
 
 # Vite
 dist/
+frontend/.vite/
+
 
 # VS Code
 .vscode/
